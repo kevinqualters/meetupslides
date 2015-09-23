@@ -25,7 +25,7 @@ export default class extends React.Component {
       <Deck transition={["zoom", "slide"]} transitionDuration={800}>
         {/* intro slide 1*/}
 
-        <Slide transition={["zoom"]} bgColor="#61dafb">
+        <Slide transition={["zoom"]} bgColor="#61dafb" notes="Mention the 3 going to talk about, and how they are designed to work with React's declarative nature">
           <Heading size={1} fit caps lineHeight={1} textColor="#fff">
             Alt.js vs Redux vs Vanilla:
           </Heading>
@@ -38,13 +38,13 @@ export default class extends React.Component {
             What is Flux?
           </Heading>
         </Slide>
-        <Slide transition={['slide']} bgColor="#61dafb">
+        <Slide transition={['slide']} bgColor="#61dafb" notes="React = views, etc">
           <Image src={images.fluxDiagram.replace("/", "")} height="75%" width="75%"></Image>
           <Heading size={1} fit textColor="#fff" textFont="secondary">More of a pattern than a traditional framework...</Heading>
         </Slide>
 
         {/* vanilla flux overview slide 2 */}
-        <Slide transition={['slide']} bgColor="#61dafb" notes="You can even put notes on your slide. How awesome is that?">
+        <Slide transition={['slide']} bgColor="#61dafb" notes="Facebook first released the paradigm, then an actual implementation">
           <Heading size={1} fit textColor="#fff" textFont="secondary">
             Vanilla Flux
           </Heading>
@@ -57,10 +57,8 @@ export default class extends React.Component {
           <List>
             <ListItem textColor="#fff">May 2013: React released</ListItem>
             <ListItem textColor="#fff">April 2014: Facebook announces Flux at the annual F8 developer conference, first official implementation released in July</ListItem>
-            <ListItem textColor="#fff">All data mutations are caused by calling actions - UI or server generated</ListItem>
-            <ListItem textColor="#fff">Data stores listen to the actions and mutate the data within themselves</ListItem>
-            <ListItem textColor="#fff">The Virtual DOM is then re-rendered followed by the real DOM being updated very efficiently by React</ListItem>
-            <ListItem textColor="#fff"><a href="https://github.com/facebook/flux">https://github.com/facebook/flux</a></ListItem>
+            <ListItem textColor="#fff">December 2014: Alt.js released</ListItem>
+            <ListItem textColor="#fff">May 2015: Redux released</ListItem>
           </List>
         </Slide>
 
@@ -98,7 +96,6 @@ export default class extends React.Component {
           <List>
             <ListItem textColor="#fff">Third party flux implementation that provides some additional features</ListItem>
             <ListItem textColor="#fff">Isomorphic and works with react-native</ListItem>
-            <ListItem textColor="#fff">Data stores listen to the actions and mutate the data within themselves</ListItem>
             <ListItem textColor="#fff">Built using Facebook's Dispatcher, and is considered a "pure" implementation of Flux</ListItem>
             <ListItem textColor="#fff"><a href="https://github.com/goatslacker/alt">https://github.com/goatslacker/alt</a></ListItem>
           </List>
@@ -115,12 +112,12 @@ export default class extends React.Component {
           <Heading size={1} fit textColor="#fff" textFont="secondary">
             Additional Features
           </Heading>
-          <Text textColor="#fff">Alt has few store manipulation features in addition to core flux that make it one of the better implementations (IMHO). These include:</Text>
+          <Text textColor="#fff">Alt has a few store manipulation features in addition to core flux that are very useful for developers. These include:</Text>
             <List>
               <ListItem textColor="#fff">The ability to save the state of a store at any time</ListItem>
               <ListItem textColor="#fff">Likewise, allows you to bootstrap the state of a particular store</ListItem>
               <ListItem textColor="#fff">Also gives the ability to flush, recycle or rollback the states of stores</ListItem>
-              <ListItem textColor="#fff"><a href="https://github.com/goatslacker/alt/docs">https://github.com/goatslacker/alt</a></ListItem>
+              <ListItem textColor="#fff"><a href="http://alt.js.org/docs/bootstrap/">http://alt.js.org/docs/bootstrap/</a></ListItem>
             </List>
         </Slide>
 
@@ -267,11 +264,6 @@ export default class extends React.Component {
           </Heading>
         <Text>Thank you!</Text>
         </Slide>
-
-
-
-
-        {/* examples */}
 
       </Deck>
     );
