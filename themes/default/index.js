@@ -1,12 +1,12 @@
 const colors = {
-  primary: "#f9c300",
+  primary: "#fff",
   secondary: "black",
   tertiary: "white"
 };
 
 const fonts = {
   primary: "Open Sans Condensed",
-  secondary: "Lobster Two",
+  secondary: "Open Sans Condensed",
   tertiary: "monospace"
 };
 
